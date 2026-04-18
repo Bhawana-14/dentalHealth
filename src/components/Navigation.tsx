@@ -21,7 +21,7 @@ export const TopBar = () => {
           <div className="flex items-center gap-2 group cursor-pointer">
             <MapPin size={14} className="text-brand-teal group-hover:scale-110 transition-transform" />
             <span className="hover:text-brand-teal transition-colors">VLPL Mall, 1st Floor, Shop F-169,
-Sector 83, Gurugram</span>
+               Sector 83, Gurugram</span>
           </div>
           <div className="flex items-center gap-2 group cursor-pointer">
             <Phone size={14} className="text-brand-teal group-hover:scale-110 transition-transform" />
