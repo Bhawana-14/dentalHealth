@@ -29,9 +29,12 @@ export const Hero = () => {
   const mouseY = useSpring(0, { stiffness: 50, damping: 20 });
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    const { clientX, clientY } = e;
-    mouseX.set(clientX - window.innerWidth / 2);
-    mouseY.set(clientY - window.innerHeight / 2);
+    const isMobile = window.innerWidth < 768;
+    if(!isMobile){
+      const { clientX, clientY } = e;
+      mouseX.set(clientX - window.innerWidth / 2);
+      mouseY.set(clientY - window.innerHeight / 2);
+    }
   };
 
   useEffect(() => {
@@ -47,12 +50,12 @@ export const Hero = () => {
     <section 
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-[90vh] flex items-center overflow-hidden bg-transparent pt-14 pb-16 md:pb-36"
+      className=" bg-transparent md:pb-36 relative min-h-[80vh] sm:min-h-[90vh] flex items-center overflow-hidden pt-10 sm:pt-14 pb-12 sm:pb-20"
     >
       {/* Dynamic Background Accents */}
       <motion.div 
         style={{ x: mouseX, y: mouseY, opacity: 0.1 }}
-        className="absolute top-1/4 left-1/4 w-160 h-160 bg-brand-teal rounded-full blur-[120px] pointer-events-none"
+        className="absolute top-1/4 left-1/4 w-40 sm:w-80 h-40 sm:h-80 bg-brand-teal rounded-full blur-[120px] pointer-events-none"
       />
       <motion.div 
         style={{ x: useTransform(mouseX, (v) => -v), y: useTransform(mouseY, (v) => -v), opacity: 0.1 }}
@@ -71,7 +74,7 @@ export const Hero = () => {
         SMILE
       </motion.div>
       
-      <div className="container-custom relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container-custom relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <motion.div 
           style={{ y: textY, opacity, scale }}
           className="relative"
@@ -83,7 +86,7 @@ export const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black leading-[0.9] mb-8 tracking-tighter text-brand-navy">
+          <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tighter text-brand-navy">
             {titleWords.map((word, i) => (
               <motion.span
                 key={i}
@@ -95,7 +98,7 @@ export const Hero = () => {
                   type: "spring",
                   stiffness: 100
                 }}
-                className={`inline-block mr-4 ${word === "Dental" ? "text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-orange" : ""}`}
+                className={`inline-block mr-2 sm:mr-3 ${word === "Dental" ? "text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-orange" : ""}`}
               >
                 {word}
               </motion.span>
@@ -106,7 +109,7 @@ export const Hero = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="text-slate-500 text-xl mb-10 max-w-lg leading-relaxed font-medium"
+            className="text-slate-500 text-base sm:text-lg mb-6 sm:mb-10 max-w-lg leading-relaxed font-medium"
           >
             Experience the next generation of dental care. We combine artistry with advanced technology to create your perfect smile.
           </motion.p>
@@ -121,7 +124,7 @@ export const Hero = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group relative px-10 py-5 bg-brand-navy text-white rounded-2xl font-black text-sm tracking-widest overflow-hidden shadow-2xl shadow-brand-navy/20"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm bg-brand-navy text-white rounded-2xl font-black tracking-widest overflow-hidden shadow-2xl shadow-brand-navy/20"
             >
               <span className="relative z-10 flex items-center gap-3">
                 BOOK APPOINTMENT <Calendar size={20} />
@@ -144,7 +147,7 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1 }}
-            className="mt-12 flex items-center gap-8 border-t border-slate-100 pt-8"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-6 sm:gap-8 border-t border-slate-100 pt-8"
           >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-brand-teal/10 rounded-xl flex items-center justify-center text-brand-teal">
@@ -171,7 +174,7 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1.2, delay: 0.4, type: "spring" }}
-          className="relative h-150"
+          className="relative h-75 sm:h-100 md:h-125 lg:h-150"
         >
           {/* Main Image Container with Advanced 3D-like Animation */}
           <motion.div 

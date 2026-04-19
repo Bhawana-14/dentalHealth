@@ -4,28 +4,28 @@ import { Quote, Star, CheckCircle2, Sparkles } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Emily Davis",
+    name: "Vinus Gupta",
     role: "Patient",
     content: "The best dental experience I've ever had! The staff is incredibly friendly and the results are amazing.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200",
     rating: 5
   },
   {
-    name: "Michael Chen",
+    name: "Akshay Kumar",
     role: "Patient",
     content: "I was nervous about my root canal, but Dr. Viyanti made me feel completely at ease. Highly recommend!",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
     rating: 5
   },
   {
-    name: "Sophia Wilson",
+    name: "Nevida Gupta",
     role: "Patient",
     content: "My Invisalign treatment was life-changing. The progress tracking was so easy and the results are perfect.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
     rating: 5
   },
   {
-    name: "James Miller",
+    name: "Mukul",
     role: "Patient",
     content: "Professional, clean, and efficient. I never have to wait long and the care is top-notch.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200",
@@ -160,7 +160,7 @@ export const Testimonials = () => {
                   </p>
 
                   <div className="flex items-center gap-5 pt-8 border-t border-slate-200 group-hover:border-white/10 transition-colors">
-                    <div className="relative">
+                    {/* <div className="relative">
                       <img 
                         src={item.image} 
                         alt={item.name} 
@@ -170,7 +170,7 @@ export const Testimonials = () => {
                       <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-brand-teal rounded-full flex items-center justify-center text-white shadow-lg">
                         <CheckCircle2 size={12} />
                       </div>
-                    </div>
+                    </div> */}
                     <div>
                       <h4 className="font-black text-brand-navy text-lg group-hover:text-white transition-colors tracking-tight">{item.name}</h4>
                       <p className="text-brand-teal text-[10px] font-black uppercase tracking-[0.2em] group-hover:text-brand-teal transition-colors">{item.role}</p>
