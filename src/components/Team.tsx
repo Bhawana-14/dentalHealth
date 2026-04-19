@@ -158,7 +158,7 @@ const team = [
     name: "Dr. Viyanti Wadhwa", 
     specialty: "Periodontist", 
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400",
-    bio: "Dr. Viyanti Wadhwa has over 15 years of experience in creating perfect smiles through advanced orthodontic treatments."
+    bio: "Dr. Viyanti Wadhwa is a highly qualified dental specialist and the founder of Dental & Health, a modern dental care clinic dedicated to providing comprehensive oral healthcare solutions. She holds a BDS (Bachelor of Dental Surgery) and MDS (Master of Dental Surgery) in Periodontology, specializing in gum health and advanced dental implant procedures. With expertise in gum care and dental implants, Dr. Wadhwa focuses on delivering precise, patient-centered treatments using advanced techniques and technology. She is committed to enhancing both the functionality and aesthetics of her patients’ smiles."
   }
 ];
 
@@ -289,9 +289,9 @@ export const Team = () => {
                 transition={{ duration: 0.8 }}
                 className="group relative max-w-5xl w-full"
               >
-                <div className="bg-white rounded-[4rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.08)] border border-white/50 flex flex-col md:flex-row h-full transition-all duration-700 hover:shadow-[0_60px_150px_rgba(14,165,233,0.25)] relative z-10">
+                <div className="bg-white rounded-[4rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.08)] border border-white/50 flex flex-col h-full transition-all duration-700 hover:shadow-[0_60px_150px_rgba(14,165,233,0.25)] relative z-10">
                   {/* Image Side with Parallax Effect */}
-                  <div className="md:w-5/12 relative overflow-hidden h-[400px] md:h-auto">
+                  {/* <div className="md:w-5/12 relative overflow-hidden h-[400px] md:h-auto">
                     <motion.img 
                       src={member.image} 
                       alt={member.name} 
@@ -299,7 +299,6 @@ export const Team = () => {
                       referrerPolicy="no-referrer"
                     />
                     
-                    {/* Social Overlay - Always visible but enhanced on hover */}
                     <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent">
                       <div className="flex gap-3 justify-center">
                         {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -313,10 +312,10 @@ export const Team = () => {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Content Side */}
-                  <div className="md:w-7/12 p-12 md:p-20 flex flex-col justify-center bg-gradient-to-br from-white via-white to-sky-50/30">
+                  <div className="md:w-full p-12 md:p-20 flex flex-col justify-center bg-gradient-to-br from-white via-white to-sky-50/30">
                     <motion.div
                       initial={{ opacity: 0, x: 30 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -336,6 +335,19 @@ export const Team = () => {
                       <p className="text-slate-500 text-xl leading-relaxed mb-12 font-medium">
                         {member.bio}
                       </p>
+
+                      <div className="flex gap-4 mb-10">
+                        {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+                          <motion.div 
+                            key={i}
+                            whileHover={{ y: -5, scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="w-12 h-12 bg-slate-100 hover:bg-brand-teal text-brand-navy hover:text-white rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 shadow-md"
+                          >
+                            <Icon size={20} />
+                          </motion.div>
+                        ))}
+                      </div>
                       
                       <div className="grid sm:grid-cols-2 gap-6 mb-12">
                         {[
