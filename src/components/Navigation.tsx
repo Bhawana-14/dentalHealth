@@ -233,7 +233,7 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center gap-3 group">
   
               {/* Logo */}
-              <div className="w-12 h-12 flex items-center justify-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
                 <img 
                   src="/dhlogo4.png" 
                   alt="Dental & Health Logo"
@@ -244,7 +244,7 @@ export const Navbar = () => {
               {/* Text */}
             <motion.span 
               style={{ color: textColor }}
-              className="text-2xl font-black tracking-tight flex items-center"
+              className="text-lg sm:text-xl md:text-2xl font-black tracking-tight flex items-center"
             >
               DENTAL &
 
