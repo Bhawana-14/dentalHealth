@@ -13,7 +13,7 @@ const testimonials = [
   {
     name: "Michael Chen",
     role: "Patient",
-    content: "I was nervous about my root canal, but Dr. Sarah made me feel completely at ease. Highly recommend!",
+    content: "I was nervous about my root canal, but Dr. Viyanti made me feel completely at ease. Highly recommend!",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
     rating: 5
   },

@@ -155,10 +155,10 @@ export const FAQ = () => {
 
 const team = [
   { 
-    name: "Dr. Sarah Johnson", 
-    specialty: "Orthodontist", 
+    name: "Dr. Viyanti Wadhwa", 
+    specialty: "Periodontist", 
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400",
-    bio: "Dr. Sarah has over 15 years of experience in creating perfect smiles through advanced orthodontic treatments."
+    bio: "Dr. Viyanti Wadhwa has over 15 years of experience in creating perfect smiles through advanced orthodontic treatments."
   }
 ];
 

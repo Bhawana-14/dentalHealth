@@ -184,7 +184,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 px-4 py-4 pointer-events-none">
+    <nav className="sticky top-0 z-50 px-2 sm:px-4 py-3 sm:py-4 pointer-events-none">
       <motion.nav 
         // style={{ backgroundColor }}
         className={`bg-[#cad1cf] container-custom backdrop-blur-xl  border border-white/10 pointer-events-auto rounded-4xl transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden ${isScrolled ? 'py-3' : 'py-5'}`}
@@ -207,7 +207,7 @@ export const Navbar = () => {
           style={{ scaleX: scrollYProgress, transformOrigin: "0%" }}
         />
 
-        <div className="flex justify-between items-center px-6">
+        <div className="flex justify-between items-center px-4 sm:px-6">
           {/* <Link to="/" className="flex items-center gap-3 group"> */}
             {/* <motion.div 
               style={{ backgroundColor: useTransform(scrollYProgress, [0, 0.1], ['#0EA5E9', '#FFFFFF']) }}
@@ -306,7 +306,7 @@ export const Navbar = () => {
               exit={{ height: 0, opacity: 0 }}
               className="md:hidden border-t border-white/10 mt-4 overflow-hidden"
             >
-              <div className="flex flex-col p-6 gap-6 font-black text-[10px] tracking-[0.2em]">
+              <div className="flex flex-col p-4 sm:p-6 gap-4 sm:gap-6 font-black text-[10px] tracking-[0.2em]">
                 {navLinks.map((link) => (
                   <Link 
                     key={link.name}

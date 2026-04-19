@@ -117,8 +117,8 @@ export const Skills = () => {
 
 export const Testimonials = () => {
   const reviews = [
-    { name: "John Doe", role: "Patient", quote: "I had a great experience at Dental Health. The staff was very professional and the treatment was painless. I highly recommend them!", rating: 5 },
-    { name: "Jane Smith", role: "Patient", quote: "The best dental clinic I've ever visited. Dr. Sarah was very patient and explained everything clearly. My smile has never looked better!", rating: 5 }
+    { name: "John Doe", role: "Patient", quote: "I had a great experience at Dental & Health. The staff was very professional and the treatment was painless. I highly recommend them!", rating: 5 },
+    { name: "Jane Smith", role: "Patient", quote: "The best dental clinic I've ever visited. Dr. Viyanti Wadhwa was very patient and explained everything clearly. My smile has never looked better!", rating: 5 }
   ];
 
   return (
