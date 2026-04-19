@@ -25,7 +25,7 @@ export const TopBar = () => {
           </div>
           <div className="flex items-center gap-2 group cursor-pointer">
             <Phone size={14} className="text-brand-teal group-hover:scale-110 transition-transform" />
-            <span className="hover:text-brand-teal transition-colors">+1 (555) 123-4567</span>
+            <span className="hover:text-brand-teal transition-colors">+91 9560904233</span>
           </div>
         </div>
         <div className="flex items-center gap-6">

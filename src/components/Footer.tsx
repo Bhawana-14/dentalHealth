@@ -404,7 +404,7 @@ Sector 83, Gurugram 94103, India</span>
             </li>
             <li className="flex items-center gap-4">
               <Phone className="text-brand-teal shrink-0" size={20} />
-              <span>+1 (555) 123-4567</span>
+              <span>+91 9560904233</span>
             </li>
             <li className="flex items-center gap-4">
               <Mail className="text-brand-teal shrink-0" size={20} />

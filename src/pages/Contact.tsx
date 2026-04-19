@@ -82,7 +82,7 @@ export const Contact = () => {
             </div>
             <h3 className="text-xl font-bold text-brand-navy mb-4">Call Us</h3>
             <p className="text-white font-medium leading-relaxed">
-              +1 (555) 123-4567<br />+1 (555) 987-6543
+              +91 9560904233<br />+1 (555) 987-6543
             </p>
           </motion.div>
           
