@@ -92,9 +92,13 @@ const sections = [
     title: 'Updates',
     iconWrapClass: 'bg-brand-orange/10 text-brand-orange',
     content: (
+      <>
       <p className="text-gray-500 leading-relaxed">
         This Privacy Policy may be updated from time to time.
       </p>
+      <p className="text-gray-500 leading-relaxed"> Last Updated: June 2026
+      </p>
+      </>
     ),
   },
 ];
