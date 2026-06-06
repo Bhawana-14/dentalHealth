@@ -25,7 +25,7 @@ export const TopBar = () => {
           </div>
           <div className="flex items-center gap-2 group cursor-pointer">
             <Phone size={14} className="text-brand-teal group-hover:scale-110 transition-transform" />
-            <span className="hover:text-brand-teal transition-colors">+91 9560904233</span>
+            <span className="hover:text-brand-teal transition-colors">+1 (555) 123-4567</span>
           </div>
         </div>
         <div className="flex items-center gap-6">
@@ -70,7 +70,7 @@ export const TopBar = () => {
                 className="text-white"
               >
                 ★
-              </motion.span>z
+              </motion.span>
             </motion.div>
           </div>
         </div>
@@ -172,6 +172,7 @@ export const Navbar = () => {
     { name: 'SERVICES', path: '/services' },
     { name: 'TESTIMONIALS', path: '#testimonials', isScroll: true },
     { name: 'CONTACT', path: '/contact' },
+    { name: 'PRIVACY', path: '/privacy' },
   ];
 
   const handleNavClick = (e: React.MouseEvent, path: string, isScroll?: boolean) => {

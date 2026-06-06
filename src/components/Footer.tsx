@@ -387,7 +387,7 @@ export const Footer = () => {
           <h4 className="text-xl font-bold mb-8 relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-1 after:bg-brand-teal">Services</h4>
           <ul className="space-y-4 text-gray-400 text-sm font-semibold">
             <li><Link to="/services" className="hover:text-brand-teal transition-colors cursor-pointer flex items-center gap-2"><ArrowRight size={14} /> Root Canals</Link></li>
-            <li><Link to="/services" className="hover:text-brand-teal transition-colors cursor-pointer flex items-center gap-2"><ArrowRight size={14} /> Orthopecics</Link></li>
+            <li><Link to="/services" className="hover:text-brand-teal transition-colors cursor-pointer flex items-center gap-2"><ArrowRight size={14} /> Orthopedics</Link></li>
             <li><Link to="/services" className="hover:text-brand-teal transition-colors cursor-pointer flex items-center gap-2"><ArrowRight size={14} /> Bridges</Link></li>
             <li><Link to="/services" className="hover:text-brand-teal transition-colors cursor-pointer flex items-center gap-2"><ArrowRight size={14} /> Dental Services</Link></li>
             <li><Link to="/services" className="hover:text-brand-teal transition-colors cursor-pointer flex items-center gap-2"><ArrowRight size={14} /> Orthodontics</Link></li>
@@ -404,7 +404,7 @@ Sector 83, Gurugram 94103, India</span>
             </li>
             <li className="flex items-center gap-4">
               <Phone className="text-brand-teal shrink-0" size={20} />
-              <span>+91 9560904233</span>
+              <span>+1 (555) 123-4567</span>
             </li>
             <li className="flex items-center gap-4">
               <Mail className="text-brand-teal shrink-0" size={20} />
@@ -414,8 +414,9 @@ Sector 83, Gurugram 94103, India</span>
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-10 text-center text-gray-500 text-sm font-semibold">
+      <div className="border-t border-white/10 pt-10 text-center text-gray-500 text-sm font-semibold flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
         <p>© 2026 Dental&Health. All Rights Reserved.</p>
+        <Link to="/privacy" className="hover:text-brand-teal transition-colors">Privacy Policy</Link>
       </div>
     </footer>
   );

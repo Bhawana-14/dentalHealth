@@ -172,11 +172,11 @@ export const Services = () => {
                   duration: 4 + index, 
                   ease: "easeInOut" 
                 }}
-                className="mb-10 w-20 h-20 bg-brand-bg-light rounded-4 flexlx items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-all duration-500 shadow-inner relative z-10"
+                className="mb-10 w-20 h-20 bg-brand-bg-light rounded-4 flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-all duration-500 shadow-inner relative z-10"
               >
                 <div className="group-hover:scale-110 transition-transform duration-500">
-                  {React.cloneElement(service.icon as React.ReactElement, { 
-                    className: "group-hover:text-white transition-colors duration-500",
+                  {React.cloneElement(service.icon as React.ReactElement, {
+                    className: "text-white group-hover:text-white transition-colors duration-500",
                     size: 36
                   })}
                 </div>

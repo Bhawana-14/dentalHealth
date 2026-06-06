@@ -63,7 +63,7 @@ export const Contact = () => {
             <div className="w-16 h-16 bg-brand-teal/10 rounded-full flex items-center justify-center text-white mx-auto mb-6">
               <MapPin size={32} />
             </div>
-            <h3 className="text-xl font-bold text-brand-navy mb-4">Our Location</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Our Location</h3>
             <p className="text-white font-medium leading-relaxed">
               VLPL Mall, 1st Floor, Shop F-169 <br />
               Sector 83, Gurugram, India
@@ -80,9 +80,9 @@ export const Contact = () => {
             <div className="w-16 h-16 bg-brand-orange/10 rounded-full flex items-center justify-center text-white mx-auto mb-6">
               <Phone size={32} />
             </div>
-            <h3 className="text-xl font-bold text-brand-navy mb-4">Call Us</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Call Us</h3>
             <p className="text-white font-medium leading-relaxed">
-              +91 9560904233<br />+1 (555) 987-6543
+              +1 (555) 123-4567<br />+1 (555) 987-6543
             </p>
           </motion.div>
           
@@ -96,7 +96,7 @@ export const Contact = () => {
             <div className="w-16 h-16 bg-brand-teal/10 rounded-full flex items-center justify-center text-white mx-auto mb-6">
               <Mail size={32} />
             </div>
-            <h3 className="text-xl font-bold text-brand-navy mb-4">Email Us</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Email Us</h3>
             <p className="text-white font-medium leading-relaxed">
               info@dentalandhealth.in
             </p>
@@ -115,12 +115,6 @@ export const Contact = () => {
             className="bg-white p-12 rounded-[40px] shadow-[0_30px_100px_rgba(0,0,0,0.05)] border border-gray-100"
           >
             <h2 className="text-3xl font-black text-brand-navy mb-8 tracking-tight">Send Us a Message</h2>
-              {isSubmitted && (
-                <p className="text-green-600 font-medium">
-                  Message sent successfully!
-                </p>
-              )}
-
               {error && (
                 <p className="text-red-600 font-medium">
                   {error}
@@ -163,7 +157,7 @@ export const Contact = () => {
               </div>
               <h3 className="text-4xl font-black text-brand-navy mb-4">Request Received!</h3>
               <p className="text-slate-500 text-lg font-medium leading-relaxed">
-                Thank you for contact with us. <br />Our team will contact you shortly.
+                Thank you for reaching out to us. <br />Our team will contact you shortly.
               </p>
             </motion.div>
           )}

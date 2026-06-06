@@ -1,13 +1,13 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'motion/react';
-import { Plus, Minus, Facebook, Twitter, Instagram, Linkedin, Share2, ArrowRight } from 'lucide-react';
+import { Plus, Minus, Facebook, Twitter, Instagram, Linkedin, Share2, ArrowRight, CalendarCheck, Stethoscope, Smile, Award, GraduationCap, Sparkles, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const HowItWorks = () => {
   const steps = [
-    { number: "01", title: "Book Appointment", desc: "Easily book your dental appointment online or via phone.", icon: "📅" },
-    { number: "02", title: "Get Consultation", desc: "Meet our expert dentists for a thorough consultation.", icon: "👨‍⚕️" },
-    { number: "03", title: "Start Treatment", desc: "Begin your personalized dental treatment plan.", icon: "🦷" }
+    { number: "01", title: "Book Appointment", desc: "Easily book your dental appointment online or via phone.", icon: CalendarCheck },
+    { number: "02", title: "Get Consultation", desc: "Meet our expert dentists for a thorough consultation.", icon: Stethoscope },
+    { number: "03", title: "Start Treatment", desc: "Begin your personalized dental treatment plan.", icon: Smile }
   ];
 
   return (
@@ -41,8 +41,10 @@ export const HowItWorks = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative z-10 flex flex-col items-center text-center group"
             >
-              <div className="w-36 h-36 bg-white rounded-3xl flex items-center justify-center text-6xl shadow-2xl mb-8 relative transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:shadow-sky-200/50 border border-slate-100">
-                {step.icon}
+              <div className="w-36 h-36 bg-white rounded-3xl flex items-center justify-center shadow-2xl mb-8 relative transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:shadow-sky-200/50 border border-slate-100">
+                <div className="w-20 h-20 rounded-2xl bg-brand-teal/10 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-colors duration-500">
+                  <step.icon size={36} strokeWidth={1.75} />
+                </div>
                 <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-brand-teal to-brand-orange text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg rotate-12 group-hover:rotate-0 transition-transform duration-500">
                   {step.number}
                 </div>
@@ -351,19 +353,21 @@ export const Team = () => {
                       
                       <div className="grid sm:grid-cols-2 gap-6 mb-12">
                         {[
-                          { label: '15+ Years Experience', icon: '🏆' },
-                          { label: 'Board Certified Expert', icon: '🎓' },
-                          { label: 'Advanced Orthodontics', icon: '✨' },
-                          { label: 'Patient Choice Award', icon: '❤️' }
+                          { label: '15+ Years Experience', icon: Award },
+                          { label: 'Board Certified Expert', icon: GraduationCap },
+                          { label: 'Advanced Orthodontics', icon: Sparkles },
+                          { label: 'Patient Choice Award', icon: Heart }
                         ].map((skill, i) => (
-                          <motion.div 
-                            key={i} 
+                          <motion.div
+                            key={i}
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 + (i * 0.1) }}
                             className="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 group/skill hover:bg-white hover:shadow-xl transition-all duration-300"
                           >
-                            <div className="text-2xl">{skill.icon}</div>
+                            <div className="w-10 h-10 rounded-xl bg-brand-teal/10 text-brand-teal flex items-center justify-center shrink-0 group-hover/skill:bg-brand-teal group-hover/skill:text-white transition-colors duration-300">
+                              <skill.icon size={18} />
+                            </div>
                             <span className="text-sm font-black text-brand-navy uppercase tracking-wider">{skill.label}</span>
                           </motion.div>
                         ))}

@@ -26,7 +26,7 @@ export const Layout = () => {
         <Outlet />
       </main>
 
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </motion.div>
   );
