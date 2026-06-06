@@ -1,3 +1,6 @@
 {
-  "devCommand": null
+  "devCommand": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }

@@ -184,6 +184,7 @@ export const Gallery = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [slidesPerView, setSlidesPerView] = useState(() => (window.innerWidth < 768 ? 2 : 5));
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -200,13 +201,19 @@ export const Gallery = () => {
     }
   }, [isHovered]);
 
+  useEffect(() => {
+    const handleResize = () => setSlidesPerView(window.innerWidth < 768 ? 2 : 5);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <section 
+    <section
       className="bg-white overflow-hidden relative group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / (window.innerWidth < 768 ? 2 : 5))}%)` }}>
+      <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / slidesPerView)}%)` }}>
         {images.map((img, index) => (
           <div key={index} className="w-1/2 md:w-1/5 flex-shrink-0 aspect-square overflow-hidden border-r border-white">
             <img 
@@ -341,7 +348,7 @@ export const Footer = () => {
 
                <div className="w-12 h-12 flex items-center justify-center">
                 <img 
-                  src="/dhlogo4.png" 
+                  src="/dhlogo2.png" 
                   alt="Dental & Health Logo"
                   className="w-full h-full object-contain"
                 />
